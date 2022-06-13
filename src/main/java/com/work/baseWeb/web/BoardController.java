@@ -66,7 +66,7 @@ public class BoardController {
 	
 	@PostMapping("/board/view/action")
 	public String boardViewAction(Model model, BoardRequestDto boardRequestDto, MultipartHttpServletRequest multiRequest) throws Exception {
-		
+		System.out.println("model = " + model);
 		try {
 			boolean result = boardService.updateBoard(boardRequestDto, multiRequest);
 			if (!result) {
